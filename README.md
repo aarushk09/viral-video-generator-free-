@@ -1,30 +1,53 @@
-# AI story generator UI
+# Viral Video Generator
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Generate viral videos with AI-powered audio and captions.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/aarushk09s-projects/v0-ai-story-generator-ui)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/6wa1FjDYw7c)
+## Features
 
-## Overview
+- Generate stories using AI
+- Convert text to speech with high-quality voices
+- **Advanced Auto-Captions** with accurate timing and smooth visual presentation
+- Preview video with captions
+- Multiple voice options
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Enhanced Caption System
 
-## Deployment
+The auto-caption system now uses a multi-tiered approach:
 
-Your project is live at:
+1. **Primary Method**: OpenAI Whisper API for accurate speech-to-text with word-level timing
+2. **Secondary Method**: Forced alignment algorithm that maps the original text to the audio duration
+3. **Fallback Method**: Simple text chunking with estimated timing
 
-**[https://vercel.com/aarushk09s-projects/v0-ai-story-generator-ui](https://vercel.com/aarushk09s-projects/v0-ai-story-generator-ui)**
+### Caption Features
 
-## Build your app
+- Word-level timing for precise caption display
+- Smooth transitions between caption segments
+- Improved visual appearance with backdrop blur and animation
+- Caption lookahead for natural timing
 
-Continue building your app on:
+## Environment Variables
 
-**[https://v0.dev/chat/projects/6wa1FjDYw7c](https://v0.dev/chat/projects/6wa1FjDYw7c)**
+The following environment variables can be used to configure the application:
 
-## How It Works
+- `GROQ_API_KEY` - API key for Groq text-to-speech service
+- `WHISPER_API_KEY` - API key for OpenAI Whisper speech-to-text service (optional)
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Technologies Used
+
+- Next.js
+- Tailwind CSS
+- shadcn/ui components
+- Groq AI for text generation
+- Groq TTS for text-to-speech
