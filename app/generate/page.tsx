@@ -344,7 +344,7 @@ export default function GeneratePage() {
                   <Key className="h-4 w-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-zinc-500" />
                   <Input
                     type="text"
-                    value={apiKey || "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"}
+                    value={apiKey || ""}
                     onChange={(e) => setApiKey(e.target.value)}
                     placeholder="Enter your Groq API key"
                     className="pl-9 bg-[#1A1A25] border-[#2A2A35] focus:border-violet-500 focus:ring-violet-500/20"
